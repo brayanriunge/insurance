@@ -1,6 +1,8 @@
 // import Image from "next/image";
 // import { Geist, Geist_Mono } from "next/font/google";
 
+import Navbar from "@/components/Navbar";
+
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -12,5 +14,9 @@
 // });
 
 export default function Home() {
-  return <div>hello</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
