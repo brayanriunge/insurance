@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/file.svg";
+import Logo from "@/public/next.svg";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
 // import { HiBars3 } from "react-icons/hi2";
@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className="  ">
       <div
-        className={`z-30 w-full ${flexStyles} fixed top-0 bg-[#ffffff] `}
+        className={`z-30 w-full ${flexStyles} fixed top-0 bg-[#f9fafd] `}
         //  bg-gradient-to-b from-[#FFFFFF] to-[#F5F5F5]
       >
         <div className={`${flexStyles} mx-auto w-5/6`}>
@@ -34,13 +34,13 @@ export default function Navbar() {
               <div className={" w-full gap-4"}>
                 <div
                   className={
-                    "flex flex-col font-medium mt-4 p-8 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 "
+                    "flex flex-col font-medium mt-4 p-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 "
                   }
                 >
                   <div
                     className={`${
                       router.pathname === "/"
-                        ? "text-black border-b-[#00a650] border-b-2 pb-2"
+                        ? " border-b-[#00a650] border-b-2 rounded"
                         : "text-gray-400 hover:border-b-2 bg-white hover:border-b-[#00a650] p-2 hover:rounded-b-4  border-b-1  border-primary-300/50 md:border-b-0"
                     }`}
                   >
@@ -59,7 +59,7 @@ export default function Navbar() {
                     className={`${
                       router.pathname === "/Properties"
                         ? "text-black border-b-[#00a650] border-b-2 pb-2"
-                        : "text-gray-400 hover:border-b-2 bg-white hover:border-b-[#00a650] p-2 hover:rounded-b-4  border-b-1  border-primary-300/50 md:border-b-0"
+                        : "text-gray-400 hover:border-b-2  hover:border-b-[#00a650] p-2 rounded  border-b-1  border-primary-300/50 md:border-b-0"
                     }`}
                   >
                     <Link
@@ -70,14 +70,14 @@ export default function Navbar() {
                           : "text-gray-400"
                       }`}
                     >
-                      Properties
+                      Insurance
                     </Link>
                   </div>
                   <div
                     className={`${
                       router.pathname === "/aboutUs"
-                        ? "text-black border-b-[#00a650] border-b-2 pb-2"
-                        : "text-gray-400 hover:border-b-2 bg-white hover:border-b-[#00a650] p-2 hover:rounded-b-4  border-b-1  border-primary-300/50 md:border-b-0"
+                        ? "text-black border-b-[#00a650] border-b-2"
+                        : "text-gray-400 hover:border-b-2  hover:border-b-[#00a650] p-2 hover:rounded-b-4  border-b-1  rounded md:border-b-0"
                     }`}
                   >
                     <Link
@@ -94,8 +94,8 @@ export default function Navbar() {
                   <div
                     className={`${
                       router.pathname === "/testimonies"
-                        ? "text-black border-b-[#00a650] border-b-2 pb-2"
-                        : "text-gray-400 hover:border-b-2 bg-white hover:border-b-[#00a650] p-2 hover:rounded-b-4  border-b-1  border-primary-300/50 md:border-b-0"
+                        ? "text-black border-b-[#00a650] border-b-2 "
+                        : "text-gray-400 hover:border-b-2  hover:border-b-[#00a650] p-2 rounded    "
                     }`}
                   >
                     <Link
@@ -106,14 +106,14 @@ export default function Navbar() {
                           : "text-gray-400"
                       }`}
                     >
-                      Testimonies
+                      Testiminials
                     </Link>
                   </div>
                   <div
                     className={`${
                       router.pathname === "/contactUs"
                         ? "text-black border-b-[#00a650] border-b-2 pb-2"
-                        : "text-gray-400 hover:border-b-2 bg-white hover:border-b-[#00a650] p-2 hover:rounded-b-4  border-b-1  border-primary-300/50 md:border-b-0"
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#00a650] p-2 rounded"
                     }`}
                   >
                     <Link
@@ -124,7 +124,7 @@ export default function Navbar() {
                           : "text-gray-400"
                       }`}
                     >
-                      Contacts
+                      News
                     </Link>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ export default function Navbar() {
                     href="/products/product"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
                   >
-                    Products
+                    Insurance
                   </Link>
 
                   {/* Services */}
@@ -176,7 +176,7 @@ export default function Navbar() {
                     href="/service"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
                   >
-                    Services
+                    About us
                   </Link>
 
                   {/* Cart */}
@@ -185,7 +185,15 @@ export default function Navbar() {
                   <Link
                     href="/chat"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
-                  ></Link>
+                  >
+                    Testiminials
+                  </Link>
+                  <Link
+                    href="/chat"
+                    className="text-gray-800 hover:text-orange-400 transition duration-200"
+                  >
+                    News
+                  </Link>
                 </div>
               </div>
             )}
