@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-[500px] overflow-hidden">
+    <div className="relative min-h-[500px] overflow-hidden mt-18">
       {/*background image*/}
       <div
         className="absolute inset-0 bg-cover bg-center  bg-no-repeat"
@@ -13,12 +13,12 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient( to right, #15233d 0%, #15233d 10%, #15233d 20%, transparent 80%, transparent 100%)",
+              "linear-gradient( to right, #15233d 2%, #15233d 2%, #15233d 2%, transparent 80%, transparent 100%)",
           }}
         >
-          <div className="md:mx-auto max-w-7xl md:w-4/5 px-4 lg:px-8 mt-18 h-full ">
+          <div className="md:mx-auto max-w-7xl md:w-4/5 px-4 lg:px-8  h-full ">
             <div className="mt-4 py-4 space-y-3.5 flex  flex-row">
-              <div className="flex flex-col w-1/2 h-full justify-between items-center">
+              <div className="flex flex-col w-1/2 h-full justify-between mt-8 items-center">
                 <h1 className="text-[48px] font-bold  text-white text-pretty">
                   Insurance that grows with your family.
                 </h1>
