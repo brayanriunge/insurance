@@ -1,6 +1,7 @@
 // import Image from "next/image";
 // import { Geist, Geist_Mono } from "next/font/google";
 
+import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 
 // const geistSans = Geist({
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Hero />
     </>
   );
 }
