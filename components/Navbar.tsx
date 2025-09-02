@@ -57,15 +57,15 @@ export default function Navbar() {
                   </div>
                   <div
                     className={`${
-                      router.pathname === "/Properties"
+                      router.pathname === "/"
                         ? "text-black border-b-[#15233d] border-b-2 pb-2"
                         : "text-gray-400 hover:border-b-2  hover:border-b-[#15233d] p-2 rounded  border-b-1  border-primary-300/50 md:border-b-0"
                     }`}
                   >
                     <Link
-                      href="/Properties"
+                      href="/insurances"
                       className={`${
-                        router.pathname === "/Properties"
+                        router.pathname === "/insurances"
                           ? "text-black"
                           : "text-gray-400"
                       }`}
