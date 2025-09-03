@@ -111,7 +111,7 @@ export default function Navbar() {
                   </div>
                   <div
                     className={`${
-                      router.pathname === "/contactUs"
+                      router.pathname === "/news"
                         ? "text-black border-b-[#15233d] border-b-2 pb-2"
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#15233d] p-2 rounded"
                     }`}
@@ -119,7 +119,7 @@ export default function Navbar() {
                     <Link
                       href="/"
                       className={`${
-                        router.pathname === "/contactUs"
+                        router.pathname === "/news"
                           ? "text-red-800"
                           : "text-gray-400"
                       }`}
