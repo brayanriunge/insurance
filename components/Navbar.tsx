@@ -165,7 +165,7 @@ export default function Navbar() {
 
                   {/* Products */}
                   <Link
-                    href="/products/product"
+                    href="/insurance"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
                   >
                     Insurance
@@ -173,7 +173,7 @@ export default function Navbar() {
 
                   {/* Services */}
                   <Link
-                    href="/service"
+                    href="/aboutUs"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
                   >
                     About us
@@ -183,13 +183,13 @@ export default function Navbar() {
 
                   {/* Chat / Notification */}
                   <Link
-                    href="/chat"
+                    href="/testimonoies"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
                   >
                     Testiminials
                   </Link>
                   <Link
-                    href="/chat"
+                    href="/news"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
                   >
                     News
