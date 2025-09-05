@@ -155,7 +155,6 @@ export default function Navbar() {
 
                 {/* Menu Items */}
                 <div className="flex flex-col items-center font-mono text-lg font-bold gap-6 mt-4">
-                  {/* Home */}
                   <Link
                     href="/"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
@@ -163,7 +162,6 @@ export default function Navbar() {
                     Home
                   </Link>
 
-                  {/* Products */}
                   <Link
                     href="/insurance"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
@@ -171,7 +169,6 @@ export default function Navbar() {
                     Insurance
                   </Link>
 
-                  {/* Services */}
                   <Link
                     href="/aboutUs"
                     className="text-gray-800 hover:text-orange-400 transition duration-200"
