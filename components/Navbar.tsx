@@ -144,7 +144,7 @@ export default function Navbar() {
             {!isAboveMediaScreens && isMenuToggled && (
               <div
                 className="bg-white fixed right-0 bottom-0 h-full w-[200px] z-40 p-5 drop-shadow-lg 
-                              overflow-hidden transition-transform duration-300 ease-in-out transform translate-x-0"
+                overflow-hidden transition-transform duration-300 ease-in-out transform translate-x-0"
               >
                 {/* Close icon */}
                 <div className="p-4 flex justify-end">
