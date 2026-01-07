@@ -2,6 +2,7 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 
 import Hero from "@/components/Hero";
+import ImageSection from "@/components/ImageSection";
 import Navbar from "@/components/Navbar";
 
 // const geistSans = Geist({
@@ -19,6 +20,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <ImageSection />
     </>
   );
 }
