@@ -8,11 +8,26 @@ import Investment from "@/public/investment(1).png";
 import Protection from "@/public/protection.png";
 
 const cardDetails = [
-  { id: 1, img: Cash, icon: <GiTakeMyMoney className="h-full w-full" /> },
+  {
+    id: 1,
+    img: Cash,
+    icon: <GiTakeMyMoney className="h-24 w-full" />,
+    descriptin: "Cash flow management",
+  },
 
-  { id: 2, img: Investment, icon: <AiOutlineStock /> },
+  {
+    id: 2,
+    img: Investment,
+    icon: <AiOutlineStock />,
+    descriptin: "Investment opportunies",
+  },
 
-  { id: 3, img: Protection, icon: <AiOutlineFileProtect /> },
+  {
+    id: 3,
+    img: Protection,
+    icon: <AiOutlineFileProtect />,
+    descriptin: "protection against uncertainties",
+  },
 ];
 
 export default function ImageSection() {
@@ -33,18 +48,17 @@ export default function ImageSection() {
                   alt="Description of image"
                   className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* bottom overlay */}
-                <div className="absolute bottom-1  left-0 rihgt-10 w-3/4  backdrop-blur-sm bg-black/60 text-white text-xs px-4 py-3 shadow-xl rounded-lg">
-                  <div className="flex items-center bg-[#1A2739] justify-between">
-                    <div className=" w-full h-full">{cardDetail.icon}</div>
-                    <div>
-                      <h3 className="text-white font-semibold text-sm">
-                        Featured Image
-                      </h3>
-                      <p className="text-white/80 text-xs">
-                        This is a custom overlay
-                      </p>
-                    </div>
+              </div>
+              {/* bottom overlay */}
+              <div className="absolute -bottom-4  left-0 rihgt-10 w-3/4  bg-white text-white text-xs  shadow-xl rounded-lg">
+                <div className="flex items-center gap-4 justify-between">
+                  <div className="  bg-[#1A2739] w-full h-full">
+                    {cardDetail.icon}
+                  </div>
+                  <div className="bg-white ">
+                    <h3 className="text-[#7DB9FF] font-semibold text-sm">
+                      {cardDetail.descriptin}
+                    </h3>
                   </div>
                 </div>
               </div>
