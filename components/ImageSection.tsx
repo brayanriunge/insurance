@@ -18,15 +18,15 @@ const cardDetails = [
   {
     id: 2,
     img: Investment,
-    icon: <AiOutlineStock />,
+    icon: <AiOutlineStock className="h-24 w-full" />,
     descriptin: "Investment opportunies",
   },
 
   {
     id: 3,
     img: Protection,
-    icon: <AiOutlineFileProtect />,
-    descriptin: "protection against uncertainties",
+    icon: <AiOutlineFileProtect className="h-24 w-full" />,
+    descriptin: "Protection against uncertainties",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function ImageSection() {
                     {cardDetail.icon}
                   </div>
                   <div className="bg-white ">
-                    <h3 className="text-[#7DB9FF] font-semibold text-sm">
+                    <h3 className="text-[#1A2739] font-semibold text-sm">
                       {cardDetail.descriptin}
                     </h3>
                   </div>
