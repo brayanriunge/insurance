@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen  min-h-[300px] md:min-h-[600px] lg:mt-18 overflow-hidden ">
+    <div className="relative min-h-screen  min-h-[300px] md:min-h-[600px] md::mt-18 overflow-hidden ">
       {/*background image*/}
       <div
         className="absolute inset-0 bg-cover bg-center   bg-no-repeat"
@@ -36,8 +36,6 @@ export default function Hero() {
                   </button>
                 </div>
               </div>
-              {/* arrows */}
-              <div></div>
             </div>
           </div>
         </div>

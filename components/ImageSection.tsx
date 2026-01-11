@@ -11,21 +11,21 @@ const cardDetails = [
   {
     id: 1,
     img: Cash,
-    icon: <GiTakeMyMoney className="h-24 w-full" />,
+    icon: <GiTakeMyMoney className="md:h-24 h-20 w-full" />,
     descriptin: "Cash flow management",
   },
 
   {
     id: 2,
     img: Investment,
-    icon: <AiOutlineStock className="h-24 w-full" />,
+    icon: <AiOutlineStock className="md:h-24 h-20 w-full" />,
     descriptin: "Investment opportunies",
   },
 
   {
     id: 3,
     img: Protection,
-    icon: <AiOutlineFileProtect className="h-24 w-full" />,
+    icon: <AiOutlineFileProtect className="md:h-24 h-20 w-full" />,
     descriptin: "Protection against uncertainties",
   },
 ];
@@ -33,7 +33,7 @@ const cardDetails = [
 export default function ImageSection() {
   return (
     <section>
-      <div className="mt-4 mx-auto flex flex-col-3 items-center justify-center gap-4">
+      <div className="mt-4 mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
         {cardDetails.map((cardDetail) => (
           <div
             key={cardDetail.id}
@@ -50,13 +50,13 @@ export default function ImageSection() {
                 />
               </div>
               {/* bottom overlay */}
-              <div className="absolute -bottom-4  left-0 rihgt-10 w-3/4  bg-white text-white text-xs  shadow-xl rounded-lg">
+              <div className="absolute -bottom-12  left-0 rihgt-10 w-3/4  bg-white text-white text-xs  shadow-xl rounded-lg">
                 <div className="flex items-center gap-4 justify-between">
                   <div className="  bg-[#1A2739] w-full h-full">
                     {cardDetail.icon}
                   </div>
                   <div className="bg-white ">
-                    <h3 className="text-[#1A2739] font-semibold text-sm">
+                    <h3 className="text-[#1A2739] text-base sm:text-lg md:text-[18px] font-semibold text-sm">
                       {cardDetail.descriptin}
                     </h3>
                   </div>
