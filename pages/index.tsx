@@ -1,6 +1,7 @@
 // import Image from "next/image";
 // import { Geist, Geist_Mono } from "next/font/google";
 
+import AboutCompany from "@/components/AboutCompany";
 import Hero from "@/components/Hero";
 import ImageSection from "@/components/ImageSection";
 import Navbar from "@/components/Navbar";
@@ -21,6 +22,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ImageSection />
+      <AboutCompany />
     </>
   );
 }
