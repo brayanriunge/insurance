@@ -5,7 +5,7 @@ import Family from "@/public/family.jpg";
 
 export default function AboutCompany() {
   return (
-    <section>
+    <section className="m-8">
       <div className="mt-12 mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
         <div className="flex flex-col mx-auto justify-center">
           <h3 className="text-[#1A2739] font-semibold text-[18px] mb-4">
@@ -57,7 +57,7 @@ export default function AboutCompany() {
           </div>
         </div>
         {/* next item for flex */}
-        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row h-full items-center lg:items-start justify-center gap-4 mx-auto   ">
+        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row h-full items-center lg:items-start justify-center gap-4 mx-auto m-4 ">
           <Image
             src={Family}
             alt="image"
@@ -65,29 +65,43 @@ export default function AboutCompany() {
             width={500}
             className="h-full w-1/2"
           />
-          <div className="flex flex-col   justify-center gap-4 ">
-            <div className="flex flex-col  ">
-              <div className="flex flex-end sm:text-lg ">
-                <h1 className="text-[#0863cb] text-xl font-bold">50+</h1>
+          <div className="flex flex-col  justify-content h-full lg:gap-12 gap-4 ">
+            <div
+              dir="ltr"
+              className="flex flex-col lg:border-b-2 border-gray-400 "
+            >
+              <div className="flex items-end sm:text-lg ">
+                <h1 className="text-[#0863cb] text-4xl font-bold">50+</h1>
               </div>
-              <p className="text-[#1A2739] font-bold sm:text-lg md:text-[20px] mb-4">
+              <p className="text-[#1A2739] font-bold sm:text-lg md:text-[20px] ">
                 Projects Completed
               </p>
-              <p className=" text-gray-400 sm:text-lg md:text-[16px] ">
-                {" "}
+              <p className=" text-gray-400 sm:text-lg md:text-[16px] lg:mb-6">
                 Reliable coverage, delivered with care.
               </p>
             </div>
-            <div className="flex flex-col flex-end ">
-              <div className="flex flex-end sm:text-lg ">
-                <h1 className="text-[#0863cb] text-xl font-bold">10k+</h1>
+            <div className="flex flex-col lg:border-b-2 border-gray-400  lg:mt-4  ">
+              <div className="flex justify-items-end sm:text-lg  ">
+                <h1 className="text-[#0863cb] text-4xl font-bold">10k+</h1>
               </div>
-              <p className="text-[#1A2739] font-bold sm:text-lg md:text-[20px] mb-4">
+              <p className="text-[#1A2739] font-bold sm:text-lg md:text-[20px] ">
                 Satsified Customers
               </p>
-              <p className=" text-gray-400 sm:text-lg md:text-[16px] ">
+              <p className=" text-gray-400 sm:text-lg md:text-[16px] lg:mb-4 ">
                 {" "}
                 Families that trust and recommend us.
+              </p>
+            </div>
+            <div className="flex flex-col lg:border-b-2 border-gray-400  lg:mt-4  ">
+              <div className="flex justify-items-end sm:text-lg  ">
+                <h1 className="text-[#0863cb] text-4xl font-bold">100%</h1>
+              </div>
+              <p className="text-[#1A2739] font-bold sm:text-lg md:text-[20px] ">
+                Claim Success Rate
+              </p>
+              <p className=" text-gray-400 sm:text-lg md:text-[16px] lg:mb-6 ">
+                {" "}
+                Quick fair and succeful claims.
               </p>
             </div>
           </div>
