@@ -7,12 +7,13 @@ export default function AboutCompany() {
   return (
     <section className="m-8">
       <div className="mt-12 mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
-        <div className="flex flex-col mx-auto justify-center">
+        <div className="flex flex-col mx-auto justify-content">
           <h3 className="text-[#1A2739] font-semibold text-[18px] mb-4">
             <span className="text-[#1882FFC7]">{">"}</span>
-            <span>{">"}</span>
-            <span>{">"}</span> About our Company <span>{"<"}</span>
-            <span>{"<"}</span>
+            <span className="text-[#1A2739]">{">"}</span>
+            <span className="text-[#1A2739]">{">"}</span> About our Company{" "}
+            <span className="text-[#1A2739]">{"<"}</span>
+            <span className="text-[#1A2739]">{"<"}</span>
             <span className="text-[#1882FFC7]">{"<"}</span>
           </h3>
           <h1 className="text-base text-[32px] tracking-[6%]  mb-4 text-[#1A2739] font-bold">
@@ -24,7 +25,7 @@ export default function AboutCompany() {
             changes, offering coverage that grows with you, not against you.
           </p>
           <ul className="text-[#1A2739] font-bold sm:text-lg md:text-[16px] mb-4 ">
-            <li className="flex flex-row  gap-2">
+            <li className="flex flex-row  gap-2 ">
               {" "}
               <span>
                 <FaStar color="#1882FFC7" />
