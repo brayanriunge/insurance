@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import People from "@/public/people.jpg";
+import Family from "@/public/family.jpg";
 
 export default function AboutCompany() {
   return (
     <section>
       <div className="mt-12 mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
-        <div className="flex flex-col  justify-center">
+        <div className="flex flex-col mx-auto justify-center">
           <h3 className="text-[#1A2739] font-semibold text-[18px] mb-4">
             <span className="text-[#1882FFC7]">{">"}</span>
             <span>{">"}</span>
@@ -50,13 +50,47 @@ export default function AboutCompany() {
               Customer-First Service
             </li>
           </ul>
-          <button className="px-6 py-3 sm:px-8 sm:py-4 md:px-6 md:py-4  md:text-lg text-sm sm:text-base font-semibold rounded-2xl text-white bg-[#0863cb] hover:bg-blue-700 transition-colors duration-300">
-            Discover More
-          </button>
+          <div>
+            <button className=" px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 md:text-lg text-sm sm:text-base font-semibold rounded-2xl text-white bg-[#0863cb] hover:bg-blue-700 transition-colors duration-300">
+              Discover More
+            </button>
+          </div>
         </div>
         {/* next item for flex */}
-        <div>
-          <Image src={People} alt="image" height={200} width={500} />
+        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row h-full items-center lg:items-start justify-center gap-4 mx-auto   ">
+          <Image
+            src={Family}
+            alt="image"
+            height={50}
+            width={500}
+            className="h-full w-1/2"
+          />
+          <div className="flex flex-col   justify-center gap-4 ">
+            <div className="flex flex-col  ">
+              <div className="flex flex-end sm:text-lg ">
+                <h1 className="text-[#0863cb] text-xl font-bold">50+</h1>
+              </div>
+              <p className="text-[#1A2739] font-bold sm:text-lg md:text-[20px] mb-4">
+                Projects Completed
+              </p>
+              <p className=" text-gray-400 sm:text-lg md:text-[16px] ">
+                {" "}
+                Reliable coverage, delivered with care.
+              </p>
+            </div>
+            <div className="flex flex-col flex-end ">
+              <div className="flex flex-end sm:text-lg ">
+                <h1 className="text-[#0863cb] text-xl font-bold">10k+</h1>
+              </div>
+              <p className="text-[#1A2739] font-bold sm:text-lg md:text-[20px] mb-4">
+                Satsified Customers
+              </p>
+              <p className=" text-gray-400 sm:text-lg md:text-[16px] ">
+                {" "}
+                Families that trust and recommend us.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

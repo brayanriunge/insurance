@@ -56,7 +56,7 @@ export default function ImageSection() {
                     {cardDetail.icon}
                   </div>
                   <div className="bg-white ">
-                    <h3 className="text-[#1A2739] text-base sm:text-lg md:text-[18px] font-semibold text-sm">
+                    <h3 className="text-[#1A2739] text-base sm:text-lg md:text-[18px] font-semibold ">
                       {cardDetail.descriptin}
                     </h3>
                   </div>

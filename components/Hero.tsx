@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen  min-h-[300px] md:min-h-[600px] md:mt-18 overflow-hidden ">
+    <div className="relative min-h-screen   md:min-h-[600px] md:mt-18 overflow-hidden ">
       {/*background image*/}
       <div
         className="absolute inset-0 bg-cover bg-center   bg-no-repeat"
@@ -30,7 +30,6 @@ export default function Hero() {
                     planning, protecting or preparing for the future we`re with
                     you every step of the way.
                   </p>
-
                   <button className="px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4  md:text-lg text-sm sm:text-base font-semibold rounded-2xl text-white bg-[#0863cb] hover:bg-blue-700 transition-colors duration-300">
                     Lets get started
                   </button>
