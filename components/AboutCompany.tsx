@@ -63,7 +63,7 @@ export default function AboutCompany() {
             alt="image"
             height={50}
             width={500}
-            className="h-full w-1/2"
+            className="h-full lg:w-1/2 w-full"
           />
           <div className="flex flex-col  justify-content h-full lg:gap-12 gap-4 ">
             <div
