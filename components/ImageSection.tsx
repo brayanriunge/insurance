@@ -32,7 +32,7 @@ const cardDetails = [
 
 export default function ImageSection() {
   return (
-    <section>
+    <section className="bg-white">
       <div className="mt-4 mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
         {cardDetails.map((cardDetail) => (
           <div
