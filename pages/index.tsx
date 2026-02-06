@@ -5,6 +5,7 @@ import AboutCompany from "@/components/AboutCompany";
 import Hero from "@/components/Hero";
 import ImageSection from "@/components/ImageSection";
 import Navbar from "@/components/Navbar";
+import OurServices from "@/components/OurServices";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -23,6 +24,7 @@ export default function Home() {
       <Hero />
       <ImageSection />
       <AboutCompany />
+      <OurServices />
     </>
   );
 }

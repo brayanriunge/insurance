@@ -11,7 +11,7 @@ export default function AboutCompany() {
           <h3 className="text-[#1A2739] font-semibold text-[18px] mb-4">
             <span className="text-[#1882FFC7]">{">"}</span>
             <span className="text-[#1A2739]">{">"}</span>
-            <span className="text-[#1A2739]">{">"}</span> About our Company{" "}
+            <span className="text-[#1A2739]">{">"}</span> ABOUT OUR COMPANY{" "}
             <span className="text-[#1A2739]">{"<"}</span>
             <span className="text-[#1A2739]">{"<"}</span>
             <span className="text-[#1882FFC7]">{"<"}</span>
