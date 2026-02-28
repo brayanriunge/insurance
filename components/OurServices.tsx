@@ -20,7 +20,7 @@ const iconDetails = [
       />
     ),
     description1: "Fire insurance",
-    description2: "Financial protection from tyhe damage.",
+    description2: "Financial protection from damage.",
   },
   {
     id: 2,
@@ -119,8 +119,8 @@ export default function OurServices() {
               Protective Plans Built for {`\n`}Every Family
             </p>
           </div>
-          <div className="lg:m-4">
-            <p className="text-gray-400  text-base sm:text-lg md:text-[16px]  max-w-xl lg:mt-4  font-medium mx-3 tracking-[2%]">
+          <div className="lg:m-4 sm:mb-8">
+            <p className="text-gray-400  text-base sm:text-lg sm:mt-4 md:text-[16px]  max-w-xl lg:mt-4  font-medium mx-3 tracking-[2%]">
               At LifeWay, we offer a range of insuranceservices tailored to meet
               your family`s changing needs - from health and life to
               future-focused coverage you can count on.
@@ -128,19 +128,19 @@ export default function OurServices() {
           </div>
         </div>
         {/* icons go here */}
-        <div className="mx-auto">
-          <div className="grid grid-col sm:grid-cols md:grid-cols-4 lg:grid-cols-4 gap-12 mb-8  items-center lg:items-start justify-center">
+        <div className="mx-auto ">
+          <div className="grid grid-col sm:grid-cols md:grid-cols-4 lg:grid-cols-4 gap-12 mb-6  items-center lg:items-start justify-center">
             {iconDetails.map((iconDetail) => (
               <div
                 key={iconDetail.id}
-                className=" bg-gray-700 rounded-lg mb-8 "
+                className=" bg-gray-700 rounded-lg mb-8  "
               >
                 <div className="flex flex-col m-4 justify-center items-center">
                   {iconDetail.icon}
                   <p className="text-white font-bold md:text-[18px] mt-2">
                     {iconDetail.description1}
                   </p>
-                  <p className="text-white font-regular text-base mt-2 mb-2">
+                  <p className="text-white font-regular text-center mt-2 mb-2">
                     {iconDetail.description2}
                   </p>
                 </div>
