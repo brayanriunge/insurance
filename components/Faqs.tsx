@@ -36,30 +36,31 @@ export default function Faqs() {
         </div>
         {/* next flex goes here */}
         <div className="flex flex-1/2 flex-col  items-center justify-content lg:mt-2  gap-4 ">
-          <div className="flex flex-row mx-auto w-5/6 justify-evenly gap-2 items-center p-2  shadow-gray-300 shadow-lg rounded-2xl">
-            <div className="rounded-full h-10 w-10 bg-[#0565d3] flex items-center justify-center ">
+          <div className="flex flex-row mx-auto justify-center gap-2 w-5/6  items-center p-2 shadow-gray-300 shadow-lg rounded-2xl">
+            <div className="rounded-full h-10 w-10 bg-[#035aa7] flex items-center justify-center ">
               <span className="font-regular text-white text-[18px]">?</span>
             </div>
-            <p className="sm:text-lg text-[#1A2739]">
-              Can I customize my insurance plan to fit my family`s needs?
+            <p className="sm:text-lg text-[#1A2739] ">
+              Can I customize my insurance plan for my family?
             </p>
-            <IoIosArrowDropdownCircle color="#1882FFC7" size={25} />
+            <IoIosArrowDropdownCircle color="#7CB9FF" size={25} />
           </div>
+
           {/* contains content */}
           <div className="flex flex-col mx-auto justify-evenly gap-2  p-2 w-5/6 shadow-gray-300 shadow-lg rounded-2xl">
-            <div className="flex flex-row mx-auto justify-content items-center p-2 gap-2 w-full ">
-              <div className="rounded-full h-10 w-10 bg-[#0565d3] flex items-center justify-center ">
+            <div className="flex flex-row mx-auto justify-evenly items-center p-2 gap-2 w-full ">
+              <div className="rounded-full h-10 w-10 bg-[#035aa7] flex items-center justify-center ">
                 <span className="font-regular text-white text-[18px]   ">
                   ?
                 </span>
               </div>
-              <p className="font-regular text-[#1882FFC7] text-[18px] sm:text-lg">
+              <p className="font-regular text-[#7CB9FF] text-[18px] sm:text-lg">
                 How quickly can I file a cliam with LifeWay?
               </p>
-              <IoIosArrowDropdownCircle color="#1882FFC7" size={25} />
+              <IoIosArrowDropdownCircle color="#7CB9FF" size={25} />
             </div>
             <div className="border-t-2 border-gray-300">
-              <p className="tracking-2% text-gray-400 md:text-[16px] tracking-[2%] text-base mt-4 sm:text-lg">
+              <p className="tracking-2% text-gray-400 md:text-[16px] tracking-[2%] text-base mt-4 m-2 sm:text-lg">
                 Filing claim is simple and fast - you can do it online or
                 through our support team and we begin processing immediately to
                 ensure a smooth experience.
@@ -67,17 +68,17 @@ export default function Faqs() {
             </div>
           </div>
           <div className="flex flex-row mx-auto justify-content gap-2 w-5/6 justify-evenly items-center p-2 shadow-gray-300 shadow-lg rounded-2xl">
-            <div className="rounded-full h-10 w-10 bg-[#0565d3] flex items-center justify-center ">
+            <div className="rounded-full h-10 w-10 bg-[#035aa7] flex items-center justify-center ">
               <span className="font-regular text-white text-[18px]   ">?</span>
             </div>
             <p className="sm:text-lg text-[#1A2739] ">
               What documents do I need to get started?
             </p>
-            <IoIosArrowDropdownCircle color="#1882FFC7" size={25} />
+            <IoIosArrowDropdownCircle color="#7CB9FF" size={25} />
           </div>
         </div>
       </div>
-      <div className="bg-[#1A2739] border-6 border-[#1882FFC7] mt-8 rounded-lg">
+      <div className="bg-[#1A2739] border-6 border-[#7CB9FF] mt-8 rounded-lg">
         <div className="flex flex-row items-center m-4 justify-between gap-12 ">
           <div className="text-white">flex</div>
           <div>col</div>
