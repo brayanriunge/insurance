@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Handshake from "@/public/handshake.jpg";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
+import { FaPhone } from "react-icons/fa6";
 
 export default function Faqs() {
   return (
@@ -74,14 +75,28 @@ export default function Faqs() {
             <p className="sm:text-lg text-[#1A2739] ">
               What documents do I need to get started?
             </p>
-            <IoIosArrowDropdownCircle color="#7CB9FF" size={25} />
+            <IoIosArrowDropdownCircle color="#7ccfff" size={25} />
           </div>
         </div>
       </div>
-      <div className="bg-[#1A2739] border-6 border-[#7CB9FF] mt-8 rounded-lg">
+      <div className="bg-[#1A2739] border-6 border-[#6FBBE7] mt-8 rounded-lg">
         <div className="flex flex-row items-center m-4 justify-between gap-12 ">
-          <div className="text-white">flex</div>
-          <div>col</div>
+          <div className="text-white font-bold text-[35px]">
+            <h1>Locate an Agent Near You</h1>
+          </div>
+          <div className="flex-row flex justify-center">
+            <div className="rounded-full h-10 w-10 items-center justify-center flex border border-[#5DCEF2] ">
+              <FaPhone color="#5DCEF2" />
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <p className="font-bold text-white text-[20px]">
+                +254 701 842 846
+              </p>
+              <p className="text-gray-500 text-[16px] font-medium">
+                Call Our Experts
+              </p>
+            </div>
+          </div>
           <div>compose</div>
         </div>
       </div>
