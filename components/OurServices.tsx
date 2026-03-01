@@ -135,7 +135,7 @@ export default function OurServices() {
                 key={iconDetail.id}
                 className=" bg-gray-700 rounded-lg mb-8  "
               >
-                <div className="flex flex-col m-4 justify-center items-center">
+                <div className="flex flex-col m-4 justify-center items-center ">
                   {iconDetail.icon}
                   <p className="text-white font-bold md:text-[18px] mt-2">
                     {iconDetail.description1}
