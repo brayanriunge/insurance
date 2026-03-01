@@ -3,6 +3,7 @@ import React from "react";
 import Handshake from "@/public/handshake.jpg";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
+import ProgressWithLabel from "./progressWithLabel";
 
 export default function Faqs() {
   return (
@@ -26,13 +27,17 @@ export default function Faqs() {
               alt="handshake"
               height={300}
               width={300}
-              className="rounded-md"
+              className="rounded-md w-full"
             />
-            <p className="text-gray-400 lg:mt-8 text-balance  sm:text-lg text-base max-w-xl mb-4 sm:mb-8 font-medium mx-3 tracking-[2%] ">
+            <p className="text-gray-400 lg:mt-8 text-balance  sm:text-lg text-base max-w-xl mb-4 sm:mb-8 font-medium mx-3 tracking-[2%] w-full">
               Whether it`s guidance, support or quick claim assistance LiFeway
               is always just a call away. Our team is dedicated to helping you
-              feel secure, supported and never alone in life`s uncertain moments
+              feel secure, supported and never alone in life`s uncertain
+              moments.
             </p>
+          </div>
+          <div className=" mt-4 ">
+            <ProgressWithLabel />
           </div>
         </div>
         {/* next flex goes here */}
@@ -79,7 +84,7 @@ export default function Faqs() {
           </div>
         </div>
       </div>
-      <div className="bg-[#1A2739] border-6 border-[#6FBBE7] mt-8 rounded-lg hidden lg:block">
+      <div className="bg-[#1A2739] border-6 border-[#5DCEF2] mt-8 rounded-lg hidden lg:block">
         <div className="flex flex-row items-center m-4 justify-between gap-12 ">
           <div className="text-white font-bold sm:text[18px] md:text-[35px]">
             <h1>Locate an Agent Near You</h1>
