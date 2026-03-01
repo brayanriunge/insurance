@@ -79,25 +79,29 @@ export default function Faqs() {
           </div>
         </div>
       </div>
-      <div className="bg-[#1A2739] border-6 border-[#6FBBE7] mt-8 rounded-lg">
+      <div className="bg-[#1A2739] border-6 border-[#6FBBE7] mt-8 rounded-lg hidden lg:block">
         <div className="flex flex-row items-center m-4 justify-between gap-12 ">
-          <div className="text-white font-bold text-[35px]">
+          <div className="text-white font-bold sm:text[18px] md:text-[35px]">
             <h1>Locate an Agent Near You</h1>
           </div>
-          <div className="flex-row flex justify-center">
-            <div className="rounded-full h-10 w-10 items-center justify-center flex border border-[#5DCEF2] ">
-              <FaPhone color="#5DCEF2" />
+          <div className="flex-row flex justify-center items-center gap-4">
+            <div className="rounded-full h-20 w-20 items-center justify-center flex border-2 border-[#5DCEF2] ">
+              <FaPhone color="#5DCEF2" size={40} />
             </div>
             <div className="flex flex-col items-center justify-center">
               <p className="font-bold text-white text-[20px]">
                 +254 701 842 846
               </p>
-              <p className="text-gray-500 text-[16px] font-medium">
+              <p className="text-gray-500 text-[20px] font-medium">
                 Call Our Experts
               </p>
             </div>
           </div>
-          <div>compose</div>
+          <div>
+            <button className="px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4  md:text-lg text-sm sm:text-base font-semibold rounded-2xl text-white bg-[#0863cb] hover:bg-blue-700 transition-colors duration-300">
+              Get a Quote
+            </button>
+          </div>
         </div>
       </div>
     </section>
