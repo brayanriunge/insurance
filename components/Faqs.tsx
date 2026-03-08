@@ -42,7 +42,7 @@ export default function Faqs() {
         </div>
         {/* next flex goes here */}
         <div className="flex flex-1/2 flex-col  items-center justify-content lg:mt-2  gap-4 ">
-          <div className="flex flex-row mx-auto justify-center gap-2 w-full items-center p-2 shadow-gray-300 shadow-lg rounded-2xl">
+          <div className="flex flex-col mx-auto justify-evenly gap-2  p-2  shadow-gray-300 shadow-lg rounded-2xl w-full">
             <div className="rounded-full h-10 w-10 bg-[#035aa7] flex items-center justify-center ">
               <span className="font-regular text-white text-[18px]">?</span>
             </div>

@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import ImageSection from "@/components/ImageSection";
 import Navbar from "@/components/Navbar";
 import OurServices from "@/components/OurServices";
+import Steps from "@/components/Steps";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function Home() {
       <AboutCompany />
       <OurServices />
       <Faqs />
+      <Steps />
     </>
   );
 }
