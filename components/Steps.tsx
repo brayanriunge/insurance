@@ -34,7 +34,7 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section className=" bg-gray-100  min-h-screen">
+    <section className=" bg-gray-50  min-h-screen">
       <div className="m-8 items-center ">
         <div className="flex flex-col items-center justify-center text-center ">
           <h3 className="text-[#1A2739] font-semibold text-[18px]  mt-8 ">
@@ -51,13 +51,15 @@ export default function Steps() {
         </div>
         <div className="grid grid-col sm:grid-cols md:grid-cols-4 lg:grid-cols-4 gap-12 mb-6  items-center lg:items-start justify-center">
           {steps.map((step) => (
-            <div key={step.id} className="bg-[#035aa7]  rounded-lg mb-8  ">
-              <div className="flex flex-col m-4 justify-center items-center ">
-                <Image src={step.icon} alt="img" />
-                <p className="text-white font-semibold text-center mt-2 mb-2">
+            <div key={step.id} className="  rounded-lg mb-8  ">
+              <div className="flex flex-col m-4  justify-content items-center bg-gray-300 rounded-lg  ">
+                <div className="rounded-full h-30 w-30 bg-[#035aa7] flex items-center justify-center p-6 mb-2 mt-4">
+                  <Image src={step.icon} alt="img" />
+                </div>
+                <p className="text-[#1A2739] font-semibold text-center mt-2 mb-2">
                   {step.description}
                 </p>
-                <p className="text-white font-regular text-center mt-2 mb-2">
+                <p className="text-gray-500 font-regular text-center mt-2 mb-2">
                   {step.description2}
                 </p>
               </div>
