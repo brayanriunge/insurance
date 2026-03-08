@@ -15,7 +15,7 @@ const iconDetails = [
     id: 1,
     icon: (
       <AiFillFire
-        color="red"
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
@@ -25,19 +25,20 @@ const iconDetails = [
   {
     id: 2,
     icon: (
-      <FaCar
-        color="red"
+      <ImManWoman
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
-    description1: "Car insurance",
-    description2: "Reliable coverage for you and your vehicle.",
+    description1: "Marriage insurance",
+    description2: "Peace of mind for your special day.",
   },
+
   {
     id: 3,
     icon: (
       <FaHeartPulse
-        color="red"
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
@@ -47,19 +48,19 @@ const iconDetails = [
   {
     id: 4,
     icon: (
-      <FaHouseChimney
-        color="red"
+      <FaPlaneCircleCheck
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
-    description1: "Home insurance",
-    description2: "Protect your home and everything in it.",
+    description1: "Travel insurance",
+    description2: "Travel safely with global coverage.",
   },
   {
     id: 5,
     icon: (
       <GiHealthPotion
-        color="red"
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
@@ -70,7 +71,7 @@ const iconDetails = [
     id: 6,
     icon: (
       <MdBusinessCenter
-        color="red"
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
@@ -80,24 +81,24 @@ const iconDetails = [
   {
     id: 7,
     icon: (
-      <ImManWoman
-        color="red"
+      <FaCar
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
-    description1: "Marriage insurance",
-    description2: "Peace of mind for your special day.",
+    description1: "Car insurance",
+    description2: "Reliable coverage for you and your vehicle.",
   },
   {
     id: 8,
     icon: (
-      <FaPlaneCircleCheck
-        color="red"
+      <FaHouseChimney
+        color="#5DCEF2"
         className="h-20 w-20  p-2 rounded-full bg-[#1A2739] "
       />
     ),
-    description1: "Travel insurance",
-    description2: "Travel safely with global coverage.",
+    description1: "Home insurance",
+    description2: "Protect your home and everything in it.",
   },
 ];
 

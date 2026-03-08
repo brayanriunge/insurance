@@ -42,18 +42,18 @@ export default function Faqs() {
         </div>
         {/* next flex goes here */}
         <div className="flex flex-1/2 flex-col  items-center justify-content lg:mt-2  gap-4 ">
-          <div className="flex flex-row mx-auto justify-center gap-2 w-5/6  items-center p-2 shadow-gray-300 shadow-lg rounded-2xl">
+          <div className="flex flex-row mx-auto justify-center gap-2 w-full items-center p-2 shadow-gray-300 shadow-lg rounded-2xl">
             <div className="rounded-full h-10 w-10 bg-[#035aa7] flex items-center justify-center ">
               <span className="font-regular text-white text-[18px]">?</span>
             </div>
             <p className="sm:text-lg text-[#1A2739] ">
-              Can I customize my insurance plan for my family?
+              Can I customize my insurance plan ?
             </p>
             <IoIosArrowDropdownCircle color="#7CB9FF" size={25} />
           </div>
 
           {/* contains content */}
-          <div className="flex flex-col mx-auto justify-evenly gap-2  p-2 w-5/6 shadow-gray-300 shadow-lg rounded-2xl">
+          <div className="flex flex-col mx-auto justify-evenly gap-2  p-2  shadow-gray-300 shadow-lg rounded-2xl w-full">
             <div className="flex flex-row mx-auto justify-evenly items-center p-2 gap-2 w-full ">
               <div className="rounded-full h-10 w-10 bg-[#035aa7] flex items-center justify-center ">
                 <span className="font-regular text-white text-[18px]   ">
@@ -61,7 +61,7 @@ export default function Faqs() {
                 </span>
               </div>
               <p className="font-regular text-[#7CB9FF] text-[18px] sm:text-lg">
-                How quickly can I file a cliam with LifeWay?
+                How quickly can I file a cliam ?
               </p>
               <IoIosArrowDropdownCircle color="#7CB9FF" size={25} />
             </div>
@@ -73,12 +73,12 @@ export default function Faqs() {
               </p>
             </div>
           </div>
-          <div className="flex flex-row mx-auto justify-content gap-2 w-5/6 justify-evenly items-center p-2 shadow-gray-300 shadow-lg rounded-2xl">
+          <div className="flex flex-row mx-auto  gap-2 w-full justify-evenly items-center p-2 shadow-gray-300 shadow-lg rounded-2xl">
             <div className="rounded-full h-10 w-10 bg-[#035aa7] flex items-center justify-center ">
               <span className="font-regular text-white text-[18px]   ">?</span>
             </div>
             <p className="sm:text-lg text-[#1A2739] ">
-              What documents do I need to get started?
+              What documents do I need to get started ?
             </p>
             <IoIosArrowDropdownCircle color="#7ccfff" size={25} />
           </div>
