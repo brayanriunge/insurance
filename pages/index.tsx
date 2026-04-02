@@ -3,11 +3,13 @@
 
 import AboutCompany from "@/components/AboutCompany";
 import Faqs from "@/components/Faqs";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import ImageSection from "@/components/ImageSection";
 import Navbar from "@/components/Navbar";
 import OurServices from "@/components/OurServices";
 import Steps from "@/components/Steps";
+import Testimonies from "@/components/Testimonies";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -29,6 +31,8 @@ export default function Home() {
       <OurServices />
       <Faqs />
       <Steps />
+      <Testimonies />
+      <Footer />
     </>
   );
 }
