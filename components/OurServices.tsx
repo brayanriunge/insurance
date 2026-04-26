@@ -104,8 +104,8 @@ const iconDetails = [
 
 export default function OurServices() {
   return (
-    <section className=" bg-[#1A2739] min-h-screen ">
-      <div className="m-8 ">
+    <section className=" bg-[#1A2739] min-h-screen p-8 ">
+      <div className=" ">
         <div className="flex mt-12  flex-col lg:flex-row items-center lg:items-start  justify-center ">
           <div className="flex flex-col m-4 mt-6 justify-center">
             <h3 className="text-gray-400 font-semibold text-[18px] mb-4">

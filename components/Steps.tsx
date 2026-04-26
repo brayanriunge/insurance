@@ -34,7 +34,7 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section className=" bg-gray-50  ">
+    <section className=" bg-gray-50 min-h-screen  ">
       <div className="m-8 items-center ">
         <div className="flex flex-col items-center justify-center text-center ">
           <h3 className="text-[#1A2739] font-semibold text-[18px]  mt-8 ">
