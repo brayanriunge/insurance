@@ -31,8 +31,8 @@ const ticks = [
 
 export default function Testimonies() {
   return (
-    <section className="min-h-screen p-8 bg-gray-300">
-      <div className="flex  flex-col lg:flex-row h-full  lg:items-start  gap-4 mt-8">
+    <section className="min-h-screen p-8 bg-gray-300" id="testimonies">
+      <div className="flex  flex-col lg:flex-row h-full  lg:items-start  gap-4 mt-12">
         <div className="flex flex-col mx-auto justify-content">
           <h3 className="text-[#1A2739] font-semibold text-[18px] mb-4">
             <span className="text-[#1882FFC7]">{">"}</span>

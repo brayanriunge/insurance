@@ -16,18 +16,10 @@ export default function Navbar() {
     <nav className="  ">
       <div
         className={`z-30 w-full shadow ${flexStyles} fixed top-0 bg-[#1A2739] `}
-        //  bg-gradient-to-b from-[#FFFFFF] to-[#F5F5F5]
       >
         <div className={`${flexStyles} mx-auto w-5/6`}>
           <div className={`${flexStyles} gap-8 w-full`}>
             <Link href="/">
-              {/* <Image
-              src={Logo}
-              alt="logo"
-              width={90}
-              height={90}
-              className="rounded-full h-[40px]"
-            /> */}
               <p className="font-semibold text-4xl text-[#7DB9FF]">LifeWay</p>
             </Link>
 
@@ -49,6 +41,33 @@ export default function Navbar() {
                   </div>
                   <div
                     className={`${
+                      router.pathname === "/#aboutUs"
+                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
+                    }`}
+                  >
+                    <Link href="/#aboutus">About Us</Link>
+                  </div>
+                  <div
+                    className={`${
+                      router.pathname === "/#ourservices"
+                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
+                    }`}
+                  >
+                    <Link href="/#ourservices">Our Services</Link>
+                  </div>
+                  <div
+                    className={`${
+                      router.pathname === "/#ourprocess"
+                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
+                    }`}
+                  >
+                    <Link href="/#ourprocess">Our Process</Link>
+                  </div>
+                  <div
+                    className={`${
                       router.pathname === "/insurance"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
@@ -56,32 +75,24 @@ export default function Navbar() {
                   >
                     <Link href="/insurance">Insurance</Link>
                   </div>
+
                   <div
                     className={`${
-                      router.pathname === "/aboutUs"
+                      router.pathname === "/#testimonies"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/">About Us</Link>
+                    <Link href="/#testimonies">Testiminials</Link>
                   </div>
                   <div
                     className={`${
-                      router.pathname === "/testimonies"
+                      router.pathname === "/#faqs"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/">Testiminials</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/news"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/">News</Link>
+                    <Link href="/#faqs">Faqs</Link>
                   </div>
                 </div>
               </div>

@@ -32,8 +32,8 @@ const cardDetails = [
 
 export default function ImageSection() {
   return (
-    <section className="">
-      <div className="mt-4 mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
+    <section className="bg-gray-200">
+      <div className=" mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
         {cardDetails.map((cardDetail) => (
           <div
             key={cardDetail.id}

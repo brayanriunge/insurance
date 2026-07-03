@@ -20,6 +20,7 @@ import Testimonies from "@/components/Testimonies";
 //   variable: "--font-geist-mono",
 //   subsets: ["latin"],
 // });
+// className={`${geistSans.variable} antialiased`}
 
 export default function Home() {
   return (
@@ -29,9 +30,9 @@ export default function Home() {
       <ImageSection />
       <AboutCompany />
       <OurServices />
-      <Faqs />
       <Steps />
       <Testimonies />
+      <Faqs />
       <Footer />
     </>
   );
