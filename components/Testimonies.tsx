@@ -71,7 +71,7 @@ export default function Testimonies() {
         <div className="flex flex-col gap-4 sm:w-full md:w-1/2 md:flex-row lg:flex-col">
           {/* first div card */}
           <div className="bg-white rounded-lg">
-            <div className="flex flex-row md:flex-col-reverse justify-content gap-4 p-12">
+            <div className="flex flex-row md:flex-col-reverse lg:flex-row justify-content gap-4 p-12">
               <div className="flex flex-col items-start">
                 <h1 className="font-semibold text-[#1A2739] text-[20px] tracking-tight">
                   Mwajuma Omollo
