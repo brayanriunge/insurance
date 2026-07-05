@@ -104,7 +104,10 @@ const iconDetails = [
 
 export default function OurServices() {
   return (
-    <section className=" bg-[#1A2739] min-h-screen p-8 " id="ourservices">
+    <section
+      className=" bg-[#1A2739] min-h-[calc(100vh-100px)] p-8 "
+      id="ourservices"
+    >
       <div className=" ">
         <div className="flex mt-12  flex-col lg:flex-row items-center lg:items-start  justify-center ">
           <div className="flex flex-col m-4 mt-6 justify-center">
@@ -130,7 +133,7 @@ export default function OurServices() {
         </div>
         {/* icons go here */}
         <div className="mx-auto ">
-          <div className="grid grid-col sm:grid-cols md:grid-cols-4 lg:grid-cols-4 gap-12 mb-6  items-center lg:items-start justify-center">
+          <div className="grid grid-col sm:grid-cols md:grid-cols-3 lg:grid-cols-4 gap-12 mb-6  items-center lg:items-start justify-center">
             {iconDetails.map((iconDetail) => (
               <div
                 key={iconDetail.id}

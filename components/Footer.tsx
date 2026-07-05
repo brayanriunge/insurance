@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <section>
       <div className="p-8  bg-[#1A2739]">
-        <div className="flex mt-12  flex-col lg:flex-row  lg:items-start   gap-6 border-b-1 border-gray-500">
+        <div className="flex mt-12  flex-col md:flex-row lg:flex-row  lg:items-start   gap-6 border-b-1 border-gray-500">
           {/* Lifeway */}
           <div className="flex flex-col justify-center  items-start gap-4 ">
             <p className="text-white font-bold text-[24px]">LifeWay</p>
@@ -65,7 +65,7 @@ export default function Footer() {
             <p className="font-regular text-[18px] text-gray-500 text-balence mb-4">
               Subscribe to our newsletter for the latest update and news
             </p>
-            <div className="bg-[#101b29] flex flex-row justify-content p-4 w-5/6 rounded-md ">
+            <div className="bg-[#101b29] flex flex-row justify-content p-4 w-5/6  rounded-md ">
               <p className="font-regular text-[18px] text-gray-500 mr-20">
                 Email address
               </p>
