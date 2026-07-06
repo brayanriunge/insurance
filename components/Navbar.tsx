@@ -133,6 +133,33 @@ export default function Navbar() {
                   </div>
                   <div
                     className={`${
+                      router.pathname === "/#aboutUs"
+                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
+                    }`}
+                  >
+                    <Link href="/#aboutus">About Us</Link>
+                  </div>
+                  <div
+                    className={`${
+                      router.pathname === "/#ourservices"
+                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
+                    }`}
+                  >
+                    <Link href="/#ourservices">Our Services</Link>
+                  </div>
+                  <div
+                    className={`${
+                      router.pathname === "/#ourprocess"
+                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
+                    }`}
+                  >
+                    <Link href="/#ourprocess">Our Process</Link>
+                  </div>
+                  <div
+                    className={`${
                       router.pathname === "/insurance"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
@@ -140,32 +167,24 @@ export default function Navbar() {
                   >
                     <Link href="/insurance">Insurance</Link>
                   </div>
+
                   <div
                     className={`${
-                      router.pathname === "/aboutUs"
+                      router.pathname === "/#testimonies"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/">About Us</Link>
+                    <Link href="/#testimonies">Testiminials</Link>
                   </div>
                   <div
                     className={`${
-                      router.pathname === "/testimonies"
+                      router.pathname === "/#faqs"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/">Testiminials</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/news"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/">News</Link>
+                    <Link href="/#faqs">Faqs</Link>
                   </div>
                 </div>
               </div>
