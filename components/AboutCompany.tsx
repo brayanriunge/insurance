@@ -5,7 +5,10 @@ import Family from "@/public/family.jpg";
 
 export default function AboutCompany() {
   return (
-    <section className="p-8 min-h-[calc(100vh-100px)] bg-gray-200" id="aboutus">
+    <section
+      className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen py-8 px-4 bg-gray-200"
+      id="aboutus"
+    >
       <div className="mt-12 mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
         <div className="flex flex-col mx-auto justify-content">
           <h3 className="text-[#1A2739] font-semibold text-[18px] mb-4">

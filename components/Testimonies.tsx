@@ -32,7 +32,7 @@ const ticks = [
 export default function Testimonies() {
   return (
     <section
-      className="min-h-screen md:h-auto p-8 bg-gray-300"
+      className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen py-8 px-4 bg-gray-300"
       id="testimonies"
     >
       <div className="flex  flex-col lg:flex-row h-full  lg:items-start  gap-4 mt-12">
