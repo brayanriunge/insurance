@@ -20,7 +20,9 @@ export default function Navbar() {
         <div className={`${flexStyles} mx-auto w-5/6`}>
           <div className={`${flexStyles} gap-8 w-full`}>
             <Link href="/">
-              <p className="font-semibold text-4xl text-[#7DB9FF]">LifeWay</p>
+              <p className="font-semibold text-4xl text-[#7DB9FF]">
+                consulting
+              </p>
             </Link>
 
             {isAboveMediaScreens ? (
@@ -55,7 +57,7 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/#ourservices">Our Services</Link>
+                    <Link href="/#ourservices">Services</Link>
                   </div>
                   <div
                     className={`${
@@ -64,7 +66,7 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/#ourprocess">Our Process</Link>
+                    <Link href="/#ourprocess">Case</Link>
                   </div>
                   <div
                     className={`${
@@ -73,7 +75,7 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/insurance">Insurance</Link>
+                    <Link href="/insurance">News</Link>
                   </div>
 
                   <div
@@ -83,7 +85,7 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/#testimonies">Testiminials</Link>
+                    <Link href="/#testimonies">Portflio</Link>
                   </div>
                   <div
                     className={`${
@@ -92,7 +94,16 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/#faqs">Faqs</Link>
+                    <Link href="/#faqs">Elements</Link>
+                  </div>
+                  <div
+                    className={`${
+                      router.pathname === "/#faqs"
+                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
+                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
+                    }`}
+                  >
+                    <Link href="/#faqs">Contact Us</Link>
                   </div>
                 </div>
               </div>
@@ -160,7 +171,7 @@ export default function Navbar() {
                   </div>
                   <div
                     className={`${
-                      router.pathname === "/insurance"
+                      router.pathname === "/#insurance"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
