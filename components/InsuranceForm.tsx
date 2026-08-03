@@ -160,5 +160,36 @@ export default function InsuranceForm() {
     setQuoteResult(null);
   };
 
-  return <div>InsuranceForm</div>;
+  return (
+    <div className="max-w-4xl mx-auto p-6">
+      {/* progress indicator */}
+      <div className="mb-8">
+        <div className="flex justify-between items-center">
+          {["Personal Info", "Vehicle", "Coverage", "Quote"].map(
+            (label, index) => (
+              <>
+                <div
+                  className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm
+                   ${
+                     step > index + 1
+                       ? "bg-green-500 text-white"
+                       : step === index + 1
+                         ? "bg-blue-600 text-white"
+                         : "bg-gray-200 text-gray-600"
+                   }
+                 `}
+                >
+                  {step > index + 1 ? "✓" : index + 1}
+                </div>
+                <span className="text-xs mt-1 text-gray-600 hidden sm:block">
+                  {label}
+                </span>
+              </>
+            ),
+          )}
+        </div>
+        <div></div>
+      </div>
+    </div>
+  );
 }
