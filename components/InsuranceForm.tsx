@@ -11,7 +11,7 @@ interface FormData {
   drivingExperience: number;
   hasAccidents: boolean;
   mileage: number;
-  loction: string;
+  location: string;
 }
 
 interface QuoteResult {
@@ -32,7 +32,7 @@ interface QuoteResult {
 export default function InsuranceForm() {
   const [step, setStep] = useState(1);
   const [quoteResult, setQuoteResult] = useState<QuoteResult | null>(null);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     age: 18,
@@ -40,7 +40,7 @@ export default function InsuranceForm() {
     vehicleYear: new Date().getFullYear(),
     coverageType: "basic",
     drivingExperience: 5,
-    hasAccident: false,
+    hasAccidents: false,
     mileage: 12000,
     location: "suburban",
   });
@@ -105,7 +105,7 @@ export default function InsuranceForm() {
     else experienceFactor = 0.9;
 
     // Accident penalty
-    const accidentPenalty = formData.hasAccident ? 1.4 : 1.0;
+    const accidentPenalty = formData.hasAccidents ? 1.4 : 1.0;
 
     //Mileage factor
     let mileageFactor = 1;
@@ -347,7 +347,7 @@ export default function InsuranceForm() {
                     <input
                       type="checkbox"
                       name="hasAccident"
-                      checked={formData.hasAccident}
+                      checked={formData.hasAccidents}
                       onChange={handleChange}
                       className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
@@ -487,7 +487,7 @@ export default function InsuranceForm() {
                   },
                   {
                     label: "Accident History",
-                    value: formData.hasAccident
+                    value: formData.hasAccidents
                       ? "Penalty Applied"
                       : "Clean Record",
                   },
