@@ -428,6 +428,143 @@ export default function InsuranceForm() {
               </div>
             </div>
           )}
+
+          {/* Step 4: Results */}
+          {step === 4 && quoteResult && (
+            <div className="space-y-6 animate-fadeIn">
+              <h2 className="text-2xl font-bold text-gray-800 text-center">
+                Your Insurance Quote
+              </h2>
+
+              {/* Main Quote Display */}
+              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl p-8 text-center shadow-lg">
+                <p className="text-blue-100 text-sm mb-2">
+                  Estimated Monthly Premium
+                </p>
+                <div className="text-6xl font-bold mb-2">
+                  ${quoteResult.totalMonthly}
+                  <span className="text-2xl font-normal text-blue-200">
+                    /month
+                  </span>
+                </div>
+                <p className="text-blue-200">
+                  or ${quoteResult.totalAnnually} paid Annualy
+                </p>
+              </div>
+
+              {/* Client Info Summary */}
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h3 className="font-semibold text-gray-700 mb-2">Quote for</h3>
+                <p className="text-gray-600">{formData.name}</p>
+                <p className="text-gray-600">{formData.email}</p>
+              </div>
+
+              {/* Breakdown */}
+              <div className="space-y-2">
+                <h3 className="font-semibold text-gray-700 mb-3">
+                  Premium Breakdown
+                </h3>
+                {[
+                  {
+                    label: "Base Rate",
+                    value: `${quoteResult.breakdown.basePremium}`,
+                  },
+                  {
+                    label: "Age Factor",
+                    value: `${quoteResult.breakdown.ageFactor}`,
+                  },
+                  {
+                    label: "Vehicle Factor",
+                    value: `${quoteResult.breakdown.vehicleFactor}`,
+                  },
+                  {
+                    label: "Coverage Level",
+                    value: `${quoteResult.breakdown.coverageFactor}`,
+                  },
+                  {
+                    label: "Eperience Discount",
+                    value: `${quoteResult.breakdown.experienceFactor}`,
+                  },
+                  {
+                    label: "Accident History",
+                    value: formData.hasAccident
+                      ? "Penalty Applied"
+                      : "Clean Record",
+                  },
+                  {
+                    label: "Milege Adjustment",
+                    value: `${quoteResult.breakdown.mileageFactor}x`,
+                  },
+                  {
+                    label: "Location Factor",
+                    value: `${quoteResult.breakdown.locationFactor}x`,
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex justiify-between  items-center py-2 border-b border-gray-100 last:border-0"
+                  >
+                    <span className="text-gray-600">{item.label}</span>
+                    <span className="font semi-bold text-gray-800">
+                      {item.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => window.print()}
+                  className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                >
+                  💾 Save / Print Quote
+                </button>
+
+                <button
+                  className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  type="button"
+                  onClick={resetForm}
+                >
+                  🔄 Get New Quote
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Navigation Buttons */}
+          {step < 4 && (
+            <div className="flex justify-between mt-8 pt-6 border-t border-gray-200">
+              {step > 1 ? (
+                <button
+                  className="px-6 py-2.5 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+                  type="button"
+                  onClick={prevStep}
+                >
+                  ← Previous
+                </button>
+              ) : (
+                <div></div>
+              )}
+              {step < 3 ? (
+                <button
+                  type="button"
+                  onClick={nextStep}
+                  className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                >
+                  Next →
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  className="px-8 py-2.5 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
+                >
+                  Calculate Quote
+                </button>
+              )}
+            </div>
+          )}
         </form>
       </div>
     </div>
