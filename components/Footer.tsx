@@ -9,7 +9,7 @@ import { RiCopyrightFill } from "react-icons/ri";
 
 export default function Footer() {
   return (
-    <section>
+    <section id="footer">
       <div className="p-8  bg-[#1A2739]">
         <div className="flex mt-12  flex-col md:flex-row lg:flex-row  lg:items-start   gap-6 border-b-1 border-gray-500">
           {/* Lifeway */}
