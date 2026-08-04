@@ -37,7 +37,7 @@ export default function InsuranceForm() {
     email: "",
     age: 18,
     vehicleType: "sedan",
-    vehicleyear: new Date().getFullYear(),
+    vehicleYear: new Date().getFullYear(),
     coverageType: "basic",
     drivingExperience: 5,
     hasAccident: false,
@@ -85,7 +85,7 @@ export default function InsuranceForm() {
     };
     const vehicleFactor = vehicleFactors[formData.vehicleType] || 1.0;
     //Vehicle age factor
-    const vehicleAge = new Date().getFullYear() - formData.vehicleyear;
+    const vehicleAge = new Date().getFullYear() - formData.vehicleYear;
     const vehicleAgefactor = vehicleAge < 3 ? 1.1 : vehicleAge < 10 ? 1.0 : 0.8;
 
     // coverage factor
@@ -188,7 +188,247 @@ export default function InsuranceForm() {
             ),
           )}
         </div>
-        <div></div>
+        <div className="mt-4 bg-gray-200 hidden sm:block">
+          <div
+            className="bg-blue-600 h-2 rounded-full transition-all duration-500"
+            style={{ width: `${((step - 1) / 3) * 100}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Form content */}
+      <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+        <form onSubmit={calculateQuote}>
+          {/* step 1: Personal Info */}
+          {step === 1 && (
+            <div className="space-y-6 animate-fadeIn">
+              <h2 className="text-2xl font-bold text-gray-800">
+                Personal Information
+              </h2>
+              <p className="text-gray-600">Tell us about yourself</p>
+              <div className="grid grid-col-1 md:grid-col-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Age
+                  </label>
+                  <input
+                    type="number"
+                    name="age"
+                    value={formData.age}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Driving Experience (years)
+                  </label>
+                  <input
+                    type="number"
+                    name="drivingExperience"
+                    value={formData.drivingExperience}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Loction
+                  </label>
+                  <select
+                    name="loction"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+                  >
+                    <option value="rural">Rural Area</option>
+                    <option value="suburban">Suburban</option>
+                    <option value="urban">Urban</option>
+                    <option value="metropolitan">Metropolitan</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Step 2: Vehicle Info */}
+          {step === 2 && (
+            <div className="space-y-6 animate-fadeIn">
+              <h2 className="text-2xl font-bold text-gray-800">
+                Vehicle Details
+              </h2>
+              <p className="text-gray-600"> Information about your </p>
+              <div className="grid grid-col-1 md:grid-col-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name
+                  </label>
+                  <select
+                    name="loction"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+                  >
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">Suv</option>
+                    <option value="truck">Truck</option>
+                    <option value="sports">Sports Car</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="compact">Compact</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Vehicle Year
+                  </label>
+                  <input
+                    type="number"
+                    name="vehicleYear"
+                    value={formData.vehicleYear}
+                    onChange={handleChange}
+                    min="1990"
+                    max={new Date().getFullYear() + 1}
+                    required
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {" "}
+                    Annual Type{" "}
+                  </label>
+                  <select
+                    name="mileage"
+                    value={formData.mileage}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+                  >
+                    <option value="5000">Less than 6000 miles</option>
+                    <option value="10000">6000 - 12000 miles</option>
+                    <option value="15000">12,000 - 20,000 miles</option>
+                    <option value="20000"> More than 20,000 miles</option>
+                  </select>
+                </div>
+                <div className="flex items-center">
+                  <label className="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="hasAccident"
+                      checked={formData.hasAccident}
+                      onChange={handleChange}
+                      className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span className="text-sm font-medium text-gray-700">
+                      Accident in the past 3 years
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* step 3: Coverage */}
+          {step === 3 && (
+            <div className="space-y-6 animate-fadeIn">
+              <h2 className="text-2xl font-bold text-gray-800">
+                Select Coverage
+              </h2>
+              <p className="text-gray-600">Choose your protection</p>
+              <div className="space-y-4">
+                {[
+                  {
+                    value: "basic",
+                    label: "Basic Liability",
+                    desc: "Minimum legal coverage",
+                    price: "Most Affordable",
+                    color: "border-gray-200 hover:border-blue-300",
+                  },
+                  {
+                    value: "comprehensive",
+                    label: "Comprehensive",
+                    desc: "Full coverage including theft & natural disasters",
+                    price: "Better Protection",
+                    color: "border-gray-200 hover:border-blue-300",
+                  },
+                  {
+                    value: "premium",
+                    label: "Premium",
+                    desc: "Maximum protection with extra benefits",
+                    price: "Best Coverage",
+                    color: "border-gray-200 hover:border-blue-300",
+                  },
+                ].map((plan) => (
+                  <label
+                    key={plan.value}
+                    className={`
+                      flex items-start p-4 border-2 rounded-lg cursor-pointer transtion-all duration-200
+                      ${
+                        formData.coverageType === plan.value
+                          ? "border-blue-500 bg-blue-50 shadow-md"
+                          : plan.color
+                      }
+                      `}
+                  >
+                    <input
+                      type="radio"
+                      name="coverageType"
+                      value={plan.value}
+                      checked={formData.coverageType === plan.value}
+                      onChange={handleChange}
+                      className="mt-0.5 mr-3 text-blue-600 focus:ring-blue-500"
+                    />
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <span className="font-semibold text-gray-900">
+                            {plan.label}
+                          </span>
+                          <p>{plan.desc}</p>
+                        </div>
+                        <span className="text-sm font-medium text-blue-600 ml-2">
+                          {plan.price}
+                        </span>
+                      </div>
+                    </div>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+        </form>
       </div>
     </div>
   );
