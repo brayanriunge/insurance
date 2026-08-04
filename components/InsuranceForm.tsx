@@ -122,6 +122,7 @@ export default function InsuranceForm() {
       metropolitan: 1.6,
     };
     const locationFactor = locatiionFactors[formData.location] || 1.0;
+
     // Calculate total
     const totalVehicleFactor = vehicleFactor * vehicleAgefactor;
     const totalAnnually =
@@ -246,7 +247,6 @@ export default function InsuranceForm() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                    placeholder="John Doe"
                   />
                 </div>
                 <div>
@@ -268,7 +268,7 @@ export default function InsuranceForm() {
                     Loction
                   </label>
                   <select
-                    name="loction"
+                    name="location"
                     value={formData.location}
                     onChange={handleChange}
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500 focus:border-transparent outline-none bg-white"
@@ -296,8 +296,8 @@ export default function InsuranceForm() {
                     Full Name
                   </label>
                   <select
-                    name="loction"
-                    value={formData.location}
+                    name="vehicleType"
+                    value={formData.vehicleType}
                     onChange={handleChange}
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500 focus:border-transparent outline-none bg-white"
                   >
@@ -328,7 +328,7 @@ export default function InsuranceForm() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     {" "}
-                    Annual Type{" "}
+                    Annual Mileage{" "}
                   </label>
                   <select
                     name="mileage"
@@ -346,7 +346,7 @@ export default function InsuranceForm() {
                   <label className="flex items-center space-x-3 cursor-pointer">
                     <input
                       type="checkbox"
-                      name="hasAccident"
+                      name="hasAccidents"
                       checked={formData.hasAccidents}
                       onChange={handleChange}
                       className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
@@ -442,13 +442,13 @@ export default function InsuranceForm() {
                   Estimated Monthly Premium
                 </p>
                 <div className="text-6xl font-bold mb-2">
-                  ${quoteResult.totalMonthly}
+                  Ksh {quoteResult.totalMonthly}
                   <span className="text-2xl font-normal text-blue-200">
                     /month
                   </span>
                 </div>
                 <p className="text-blue-200">
-                  or ${quoteResult.totalAnnually} paid Annualy
+                  or Ksh {quoteResult.totalAnnually} paid Annualy
                 </p>
               </div>
 
@@ -504,8 +504,9 @@ export default function InsuranceForm() {
                     key={index}
                     className="flex justiify-between  items-center py-2 border-b border-gray-100 last:border-0"
                   >
-                    <span className="text-gray-600">{item.label}</span>
+                    <span className="text-gray-600"> {item.label}: </span>
                     <span className="font semi-bold text-gray-800">
+                      {" "}
                       {item.value}
                     </span>
                   </div>
