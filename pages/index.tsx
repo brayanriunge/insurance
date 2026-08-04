@@ -6,6 +6,7 @@ import Faqs from "@/components/Faqs";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import ImageSection from "@/components/ImageSection";
+import InsuranceFormPage from "@/components/InsuranceFormPage";
 import Navbar from "@/components/Navbar";
 import OurServices from "@/components/OurServices";
 import Steps from "@/components/Steps";
@@ -31,6 +32,7 @@ export default function Home() {
       <AboutCompany />
       <OurServices />
       <Steps />
+      <InsuranceFormPage />
       <Testimonies />
       <Faqs />
       <Footer />
