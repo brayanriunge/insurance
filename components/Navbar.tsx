@@ -64,16 +64,16 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/#ourprocess">Case</Link>
+                    <Link href="/#ourprocess">Our Process</Link>
                   </div>
                   <div
                     className={`${
-                      router.pathname === "/insurance"
+                      router.pathname === "/#insurance"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/insurance">News</Link>
+                    <Link href="/#insurance">Insurance Quote</Link>
                   </div>
 
                   <div
@@ -83,7 +83,7 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/#testimonies">Portflio</Link>
+                    <Link href="/#testimonies">Testimonies</Link>
                   </div>
                   <div
                     className={`${
@@ -92,11 +92,11 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/#faqs">Elements</Link>
+                    <Link href="/#faqs">Faqs</Link>
                   </div>
                   <div
                     className={`${
-                      router.pathname === "/#faqs"
+                      router.pathname === "/#footer"
                         ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
@@ -174,7 +174,7 @@ export default function Navbar() {
                         : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
                     }`}
                   >
-                    <Link href="/insurance">Insurance</Link>
+                    <Link href="/#insurance">Insurance Quote</Link>
                   </div>
 
                   <div

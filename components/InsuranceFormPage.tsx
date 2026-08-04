@@ -3,7 +3,10 @@ import InsuranceForm from "./InsuranceForm";
 
 export default function InsuranceFormPage() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from gray-50 to-blue-50 py-8 px-4">
+    <section
+      className="min-h-screen bg-gradient-to-br from gray-50 to-blue-50 py-8 px-4"
+      id="insurance"
+    >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
