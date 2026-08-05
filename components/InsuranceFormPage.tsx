@@ -4,7 +4,7 @@ import InsuranceForm from "./InsuranceForm";
 export default function InsuranceFormPage() {
   return (
     <section
-      className="min-h-screen bg-gradient-to-br from gray-50 to-blue-50 py-8 px-4"
+      className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen  bg-gradient-to-br from gray-50 to-blue-50 py-8 px-4"
       id="insurance"
     >
       <div className="max-w-4xl mx-auto">

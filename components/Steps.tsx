@@ -49,7 +49,7 @@ export default function Steps() {
             Our Simple 4-Step Process
           </h1>
         </div>
-        <div className="grid grid-col sm:grid-cols md:grid-cols-4 lg:grid-cols-4 gap-12 mb-6  items-center lg:items-start justify-center">
+        <div className="grid grid-col sm:grid-cols md:grid-row-4 lg:grid-cols-4 gap-12 mb-6  items-center lg:items-start justify-center">
           {steps.map((step) => (
             <div key={step.id} className="  rounded-lg mb-8  ">
               <div className="flex flex-col m-4  justify-content items-center bg-gray-300 rounded-lg  ">

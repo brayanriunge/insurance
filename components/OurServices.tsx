@@ -108,7 +108,7 @@ export default function OurServices() {
       className=" bg-[#1A2739] min-h-[calc(100vh-100px)] p-8 "
       id="ourservices"
     >
-      <div className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen py-8 px-4 ">
+      <div className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen py-4 px-4 ">
         <div className="flex mt-12  flex-col lg:flex-row items-center lg:items-start  justify-center ">
           <div className="flex flex-col m-4 mt-6 justify-center">
             <h3 className="text-gray-400 font-semibold text-[18px] mb-4">
@@ -132,8 +132,8 @@ export default function OurServices() {
           </div>
         </div>
         {/* icons go here */}
-        <div className="mx-auto ">
-          <div className="grid grid-col sm:grid-cols md:grid-cols-3 lg:grid-cols-4 gap-12 mb-6  items-center lg:items-start justify-center">
+        <div className="mx-auto mt-4">
+          <div className="grid grid-col sm:grid-cols md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6  items-center lg:items-start justify-center">
             {iconDetails.map((iconDetail) => (
               <div
                 key={iconDetail.id}

@@ -432,104 +432,122 @@ export default function InsuranceForm() {
           {/* Step 4: Results */}
           {step === 4 && quoteResult && (
             <div className="space-y-6 animate-fadeIn">
-              <h2 className="text-2xl font-bold text-gray-800 text-center">
-                Your Insurance Quote
-              </h2>
+              <div className="print-area">
+                <h2 className="text-2xl font-bold text-gray-800 text-center">
+                  Your Insurance Quote
+                </h2>
 
-              {/* Main Quote Display */}
-              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl p-8 text-center shadow-lg">
-                <p className="text-blue-100 text-sm mb-2">
-                  Estimated Monthly Premium
-                </p>
-                <div className="text-6xl font-bold mb-2">
-                  Ksh {quoteResult.totalMonthly}
-                  <span className="text-2xl font-normal text-blue-200">
-                    /month
-                  </span>
-                </div>
-                <p className="text-blue-200">
-                  or Ksh {quoteResult.totalAnnually} paid Annualy
-                </p>
-              </div>
-
-              {/* Client Info Summary */}
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-700 mb-2">Quote for</h3>
-                <p className="text-gray-600">{formData.name}</p>
-                <p className="text-gray-600">{formData.email}</p>
-              </div>
-
-              {/* Breakdown */}
-              <div className="space-y-2">
-                <h3 className="font-semibold text-gray-700 mb-3">
-                  Premium Breakdown
-                </h3>
-                {[
-                  {
-                    label: "Base Rate",
-                    value: `${quoteResult.breakdown.basePremium}`,
-                  },
-                  {
-                    label: "Age Factor",
-                    value: `${quoteResult.breakdown.ageFactor}`,
-                  },
-                  {
-                    label: "Vehicle Factor",
-                    value: `${quoteResult.breakdown.vehicleFactor}`,
-                  },
-                  {
-                    label: "Coverage Level",
-                    value: `${quoteResult.breakdown.coverageFactor}`,
-                  },
-                  {
-                    label: "Eperience Discount",
-                    value: `${quoteResult.breakdown.experienceFactor}`,
-                  },
-                  {
-                    label: "Accident History",
-                    value: formData.hasAccidents
-                      ? "Penalty Applied"
-                      : "Clean Record",
-                  },
-                  {
-                    label: "Milege Adjustment",
-                    value: `${quoteResult.breakdown.mileageFactor}x`,
-                  },
-                  {
-                    label: "Location Factor",
-                    value: `${quoteResult.breakdown.locationFactor}x`,
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex justiify-between  items-center py-2 border-b border-gray-100 last:border-0"
-                  >
-                    <span className="text-gray-600"> {item.label}: </span>
-                    <span className="font semi-bold text-gray-800">
-                      {" "}
-                      {item.value}
+                {/* Main Quote Display */}
+                <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl p-8 text-center shadow-lg">
+                  <p className="text-blue-100 text-sm mb-2">
+                    Estimated Monthly Premium
+                  </p>
+                  <div className="text-6xl font-bold mb-2">
+                    Ksh {quoteResult.totalMonthly}
+                    <span className="text-2xl font-normal text-blue-200">
+                      /month
                     </span>
                   </div>
-                ))}
-              </div>
+                  <p className="text-blue-200">
+                    or Ksh {quoteResult.totalAnnually} paid Annualy
+                  </p>
+                  <p className="text-xs text-blue-300 mt-2">
+                    {" "}
+                    Quote provided by LifeWay
+                  </p>
+                </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                <button
-                  type="button"
-                  onClick={() => window.print()}
-                  className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                >
-                  💾 Save / Print Quote
-                </button>
+                {/* Client Info Summary */}
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h3 className="font-semibold text-lg text-gray-700 mb-2">
+                    Quote Details
+                  </h3>
+                  <p className="text-gray-600">
+                    <strong>Name: {""}</strong>
+                    {formData.name}
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>Email: {""}</strong>
+                    {formData.email}
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>Vehicle: {""}</strong>
+                    {formData.vehicleType}, {""} {formData.vehicleYear}
+                  </p>
+                </div>
 
-                <button
-                  className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                  type="button"
-                  onClick={resetForm}
-                >
-                  🔄 Get New Quote
-                </button>
+                {/* Breakdown */}
+                <div className="space-y-2">
+                  <h3 className="font-semibold text-gray-700 mb-3">
+                    Premium Breakdown
+                  </h3>
+                  {[
+                    {
+                      label: "Base Rate",
+                      value: `${quoteResult.breakdown.basePremium}`,
+                    },
+                    {
+                      label: "Age Factor",
+                      value: `${quoteResult.breakdown.ageFactor}`,
+                    },
+                    {
+                      label: "Vehicle Factor",
+                      value: `${quoteResult.breakdown.vehicleFactor}`,
+                    },
+                    {
+                      label: "Coverage Level",
+                      value: `${quoteResult.breakdown.coverageFactor}`,
+                    },
+                    {
+                      label: "Eperience Discount",
+                      value: `${quoteResult.breakdown.experienceFactor}`,
+                    },
+                    {
+                      label: "Accident History",
+                      value: formData.hasAccidents
+                        ? "Penalty Applied"
+                        : "Clean Record",
+                    },
+                    {
+                      label: "Milege Adjustment",
+                      value: `${quoteResult.breakdown.mileageFactor}x`,
+                    },
+                    {
+                      label: "Location Factor",
+                      value: `${quoteResult.breakdown.locationFactor}x`,
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex justiify-between  items-center py-2 border-b border-gray-100 last:border-0"
+                    >
+                      <span className="text-gray-600"> {item.label}: </span>
+                      <span className="font semi-bold text-gray-800">
+                        {" "}
+                        {item.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-4 no-print">
+                  <button
+                    type="button"
+                    onClick={() => window.print()}
+                    className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  >
+                    💾 Save / Print Quote
+                  </button>
+
+                  <button
+                    className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                    type="button"
+                    onClick={resetForm}
+                  >
+                    🔄 Get New Quote
+                  </button>
+                </div>
               </div>
             </div>
           )}
