@@ -20,7 +20,7 @@ export default function Hero() {
           <div className=" container mx-auto px-4 sm:px-6 lg:px-8  h-full ">
             <div className="flex  flex-col lg:flex-row h-full items-center lg:items-start ">
               <div className="flex flex-col w-full lg:w-1/2 h-full justify-center lg:justify-start py-8 lg:py-0 lg:pt-12 xl:pt-20 ">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold  text-white text-pretty tracking-[6%]">
+                <h1 className=" text-4xl md:text-5xl lg:text-[48px] font-bold  text-white text-pretty tracking-[6%]">
                   Insurance that grows with your family.
                 </h1>
                 <div className="border-l-2 flex-col pl-4 sm:pl-6 md:pl-8 mt-4  border-gray-50">
