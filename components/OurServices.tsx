@@ -105,10 +105,10 @@ const iconDetails = [
 export default function OurServices() {
   return (
     <section
-      className=" bg-[#1A2739] min-h-[calc(100vh-100px)] p-8 "
+      className=" bg-[#1A2739] min-h-[calc(100vh-100px)] py-8 px-8  "
       id="ourservices"
     >
-      <div className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen py-4 px-4 ">
+      <div className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen ">
         <div className="flex mt-12  flex-col lg:flex-row items-center lg:items-start  justify-center ">
           <div className="flex flex-col m-4 mt-6 justify-center">
             <h3 className="text-gray-400 font-semibold text-[18px] mb-4">
