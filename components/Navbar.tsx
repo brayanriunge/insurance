@@ -18,7 +18,7 @@ export default function Navbar() {
     { id: "about", label: "About Us" },
     { id: "services", label: "Services" },
     { id: "ourprocess", label: "Our Process" },
-    { id: "insurance", label: "Insurance Quote" },
+    { id: "insurance", label: "Insurance" },
     { id: "testimonies", label: "Testimonies" },
     { id: "faqs", label: "Faqs" },
     { id: "contactus", label: "Contact Us" },
@@ -98,7 +98,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Menu Items */}
-                <div className="flex flex-col items-center font-mono text-lg font-bold gap-6 mt-4">
+                <div className="flex flex-col items-center font-mono text-lg font-bold gap-4 mt-4">
                   {navItems.map((navItem) => (
                     <button
                       key={navItem.id}
@@ -106,7 +106,12 @@ export default function Navbar() {
                         handleClick(navItem.id);
                         setIsMenuToggled(false);
                       }}
-                      className="w-full text-center py-3 px-3 rounded-lg transition-all duration-300"
+                      className={`w-full  text-center py-3 px-3 rounded-lg transition-all duration-300 
+                        ${
+                          activeSection === navItem.id
+                            ? "text-[#176CD5] bg-[#176CD5]/20 font-bold"
+                            : "text-gray-400 hover:text-[#176CD5] hover:bg-[#176CD5]/20"
+                        }`}
                     >
                       {navItem.label}
                     </button>

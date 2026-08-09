@@ -179,6 +179,7 @@ export default function InsuranceForm() {
                          : "bg-gray-200 text-gray-600"
                    }
                  `}
+                  key={index}
                 >
                   {step > index + 1 ? "✓" : index + 1}
                 </div>
