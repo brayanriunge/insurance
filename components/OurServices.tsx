@@ -106,7 +106,7 @@ export default function OurServices() {
   return (
     <section
       className=" bg-[#1A2739] min-h-[calc(100vh-100px)] py-8 px-8  "
-      id="ourservices"
+      id="services"
     >
       <div className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen ">
         <div className="flex mt-12  flex-col lg:flex-row items-center lg:items-start  justify-center ">

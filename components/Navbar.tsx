@@ -2,7 +2,6 @@ import Link from "next/link";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
 // import { HiBars3 } from "react-icons/hi2";
-import { useRouter } from "next/router";
 import { HiBars3 } from "react-icons/hi2";
 import { HiOutlineX } from "react-icons/hi";
 // import { HiOutlineX } from "react-icons/hi";
@@ -11,11 +10,35 @@ export default function Navbar() {
   const flexStyles = "justify-between flex items-center";
   const isAboveMediaScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-  const router = useRouter();
+
+  const [activeSection, setActiveSection] = useState("home");
+
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About Us" },
+    { id: "services", label: "Services" },
+    { id: "ourprocess", label: "Our Process" },
+    { id: "insurance", label: "Insurance Quote" },
+    { id: "testimonies", label: "Testimonies" },
+    { id: "faqs", label: "Faqs" },
+    { id: "contactus", label: "Contact Us" },
+  ];
+
+  const handleClick = (sectionId: string) => {
+    setActiveSection(sectionId);
+    setIsMenuToggled(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <nav className="  ">
       <div
-        className={`z-30 w-full shadow ${flexStyles} fixed top-0 bg-[#1A2739] `}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1A2739]`}
       >
         <div className={`${flexStyles} mx-auto w-5/6`}>
           <div className={`${flexStyles} gap-8 w-full`}>
@@ -30,79 +53,24 @@ export default function Navbar() {
                     "flex flex-col font-medium mt-4 p-4  md:flex-row md:space-x-8 md:mt-0 text-[16px]   "
                   }
                 >
-                  <div
-                    className={`${
-                      router.pathname === "/"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/">Home</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#aboutUs"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#aboutus">About Us</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#ourservices"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#ourservices">Services</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#ourprocess"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#ourprocess">Our Process</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#insurance"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#insurance">Insurance Quote</Link>
-                  </div>
-
-                  <div
-                    className={`${
-                      router.pathname === "/#testimonies"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#testimonies">Testimonies</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#faqs"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#faqs">Faqs</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#footer"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#faqs">Contact Us</Link>
-                  </div>
+                  {navItems.map((navItem) => (
+                    <button
+                      key={navItem.id}
+                      onClick={() => handleClick(navItem.id)}
+                      className={`relative transition-all duration-300
+                        ${
+                          activeSection === navItem.id
+                            ? "text-[#176CD5] font-bold"
+                            : "text-gray-400 hover:text-[#176CD5]"
+                        }
+                        `}
+                    >
+                      {navItem.label}
+                      {activeSection === navItem.id && (
+                        <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#176CD5] rounded-full" />
+                      )}
+                    </button>
+                  ))}
                 </div>
               </div>
             ) : (
@@ -131,70 +99,18 @@ export default function Navbar() {
 
                 {/* Menu Items */}
                 <div className="flex flex-col items-center font-mono text-lg font-bold gap-6 mt-4">
-                  <div
-                    className={`${
-                      router.pathname === "/"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/">Home</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#aboutUs"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#aboutus">About Us</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#ourservices"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#ourservices">Our Services</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#ourprocess"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#ourprocess">Our Process</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#insurance"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#insurance">Insurance Quote</Link>
-                  </div>
-
-                  <div
-                    className={`${
-                      router.pathname === "/#testimonies"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#testimonies">Testiminials</Link>
-                  </div>
-                  <div
-                    className={`${
-                      router.pathname === "/#faqs"
-                        ? "text-[#7DB9FF] border-b-[#176CD5] border-b-2 "
-                        : "text-gray-400 hover:border-b-2 hover:border-b-[#176CD5] p-2 hover:rounded-b-2 border-b-2   md:border-b-0"
-                    }`}
-                  >
-                    <Link href="/#faqs">Faqs</Link>
-                  </div>
+                  {navItems.map((navItem) => (
+                    <button
+                      key={navItem.id}
+                      onClick={() => {
+                        handleClick(navItem.id);
+                        setIsMenuToggled(false);
+                      }}
+                      className="w-full text-center py-3 px-3 rounded-lg transition-all duration-300"
+                    >
+                      {navItem.label}
+                    </button>
+                  ))}
                 </div>
               </div>
             )}

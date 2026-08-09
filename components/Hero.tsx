@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen   md:min-h-[600px] md:mt-18 overflow-hidden ">
+    <div
+      className="relative min-h-screen   md:min-h-[600px]  overflow-hidden "
+      id="home"
+    >
       {/*background image*/}
       <div
         className="absolute inset-0 bg-cover bg-center   bg-no-repeat"
