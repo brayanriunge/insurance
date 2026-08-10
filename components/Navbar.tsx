@@ -1,6 +1,6 @@
 import Link from "next/link";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { HiBars3 } from "react-icons/hi2";
 import { HiBars3 } from "react-icons/hi2";
 import { HiOutlineX } from "react-icons/hi";
@@ -10,7 +10,7 @@ export default function Navbar() {
   const flexStyles = "justify-between flex items-center";
   const isAboveMediaScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   const navItems = [
@@ -23,6 +23,28 @@ export default function Navbar() {
     { id: "faqs", label: "Faqs" },
     { id: "contactus", label: "Contact Us" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+      //Auto-detect active section
+      const sections = navItems.map((navItem) =>
+        document.getElementById(navItem.id),
+      );
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100) {
+            setActiveSection(navItems[i].id);
+            break;
+          }
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   const handleClick = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -38,7 +60,9 @@ export default function Navbar() {
   return (
     <nav className="  ">
       <div
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1A2739]`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1A2739] ${
+          isScrolled ? "shadow-lg" : "shadow-md"
+        }`}
       >
         <div className={`${flexStyles} mx-auto w-5/6`}>
           <div className={`${flexStyles} gap-8 w-full`}>
@@ -98,7 +122,10 @@ export default function Navbar() {
                 </div>
 
                 {/* Menu Items */}
-                <div className="flex flex-col items-center font-mono text-lg font-bold gap-4 mt-4">
+                <div
+                  className="flex flex-col items-center font-mono text-lg font-bold gap-4 mt-4"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   {navItems.map((navItem) => (
                     <button
                       key={navItem.id}
