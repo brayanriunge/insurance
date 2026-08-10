@@ -65,11 +65,11 @@ export default function Footer() {
             <p className="font-regular text-[18px] text-gray-500 text-balence mb-4">
               Subscribe to our newsletter for the latest update and news
             </p>
-            <div className="bg-[#101b29] flex flex-row justify-content p-4 w-5/6  rounded-md ">
+            <div className="bg-[#101b29] flex flex-row justify-content p-2 w-5/6  rounded-md ">
               <p className="font-regular text-[18px] text-gray-500 mr-20">
                 Email address
               </p>
-              <GrSend color="white" className="size-20 md:size-20 lg:size-10" />
+              <GrSend color="white" className="size-10 " />
             </div>
             <div className="flex-row flex justify-content mb-4  gap-4">
               <div className="rounded-full items-center justify-center flex ">
