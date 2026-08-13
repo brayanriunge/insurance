@@ -32,7 +32,7 @@ const ticks = [
 export default function Testimonies() {
   return (
     <section
-      className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen py-8 px-8 bg-gray-300"
+      className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen p-12 bg-gray-300"
       id="testimonies"
     >
       <div className="flex  flex-col lg:flex-row h-full  lg:items-start  gap-4 mt-10">
@@ -45,7 +45,7 @@ export default function Testimonies() {
             <span className="text-[#1A2739]">{"<"}</span>
             <span className="text-[#1882FFC7]">{"<"}</span>
           </h3>
-          <h1 className="text-base text-3xl md:text-4xl tracking-tight  mb-4 text-[#1A2739] font-bold">
+          <h1 className=" text-3xl md:text-4xl tracking-tight  mb-4 text-[#1A2739] font-bold">
             What Families Are Saying About LifeWay
           </h1>
           <p className="text-gray-500 mt-4 text-balance  sm:text-lg text-base max-w-xl  font-medium  tracking-[2%] w-full">
