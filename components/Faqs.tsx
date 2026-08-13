@@ -8,10 +8,10 @@ import ProgressWithLabel from "./progressWithLabel";
 export default function Faqs() {
   return (
     <section
-      className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen p-12 mt-10 bg-gray-200"
+      className="min-h-[60vh] md:min-h-[70vh] lg:min-h-screen p-12  bg-gray-200"
       id="faqs"
     >
-      <div className=" mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4">
+      <div className=" mx-auto flex  flex-col lg:flex-row h-full items-center lg:items-start justify-center gap-4 mt-10">
         <div className="flex flex-col mx-auto justify-content">
           <h3 className="text-[#1A2739] font-semibold text-[18px] mb-4">
             <span className="text-[#1882FFC7]">{">"}</span>
