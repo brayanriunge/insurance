@@ -7,7 +7,7 @@ export default function FloatingWhatsApp() {
   const message = encodeURIComponent(
     "Hello! I have a question about your services.",
   );
-  const whatsappUrl = `https://wa.me${phoneNumber}?text=${message}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
