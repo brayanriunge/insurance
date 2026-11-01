@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import FloatingWhatsApp from "../components/FloatingWhatsApp";
 
 export default function Document() {
   return (
@@ -7,6 +8,7 @@ export default function Document() {
       <body className={`antialiased`}>
         <Main />
         <NextScript />
+        <FloatingWhatsApp />
       </body>
     </Html>
   );
